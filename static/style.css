@@ -750,9 +750,8 @@ textarea:focus {
   margin-top: 24px;
 }
 
-/* Projects dropdown polish */
 .proj__drop{
-  margin-top: px;
+  margin-top: 32px;
   border: 1px solid rgba(255,255,255,0.10);
   border-radius: 16px;
   background: rgba(255,255,255,0.04);
