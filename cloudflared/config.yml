@@ -1,0 +1,7 @@
+tunnel: personal-web
+credentials-file: /etc/cloudflared/personal-web.json
+
+ingress:
+  - hostname: xavirubio.com
+    service: http://web:8080
+  - service: http_status:404
