@@ -1,0 +1,72 @@
+{# templates/rag_assistant.html #}
+<!--------------- RAG Assistant --------------->
+<section id="rag-assistant" class="rag">
+	<div class="XoZMR">
+		<div class="gSZbEr">
+			<div class="hjIkEh">
+				<div class="rag__header animate__animated animate__fadeIn">
+					<h2 class="rag__title">RAG Assistant</h2>
+					<p class="rag__subtitle">
+						Ask questions about the documents I’ve ingested. Answers are generated from retrieved context (and can include sources).
+					</p>
+				</div>
+				
+				<div class="rag__card animate__animated animate__fadeInUp">
+					<div class="rag__controls">
+						<label class="rag__label" for="ragQuestion">Question</label>
+						
+						<div class="rag__row">
+							<input
+							id="ragQuestion"
+							class="rag__input"
+							type="text"
+							placeholder="e.g., Mention all the projects described in the document."
+							autocomplete="off"
+							/>
+							<button id="ragSend" class="rag__btn" type="button">Send</button>
+						</div>
+						
+						<div class="rag__row rag__row--small">
+							<label class="rag__toggle">
+								<input id="ragShowSources" type="checkbox" checked />
+								<span>Show sources</span>
+							</label>
+							
+							<!-- TODO: API base input -->
+							<div class="rag__apibase">
+								<span class="rag__hint">API:</span>
+								<input id="ragApiBase" class="rag__input rag__input--small" type="text" value="http://localhost:8000" spellcheck="false"/>
+							</div>
+						</div>
+						
+						<div class="rag__chips">
+							<button class="rag__chip" data-q="Which countries are mentioned in the document?">Countries</button>
+							<button class="rag__chip" data-q="Identify all people mentioned in the document.">Names</button>
+							<button class="rag__chip" data-q="Which projects are described in the document?">Projects</button>
+							<button class="rag__chip" data-q="What tools and technologies are mentioned in the document?">Technologies</button>
+						</div>
+					</div>
+					
+					<div class="rag__output">
+						<div class="rag__status" id="ragStatus">Ready.</div>
+						
+						<div class="rag__answer animate__animated" id="ragAnswer">
+							<div class="rag__placeholder">
+								Ask a question to see the answer here.
+							</div>
+						</div>
+						
+						<div class="rag__sources" id="ragSources" style="display:none;">
+							<div class="rag__sourcesTitle">Sources</div>
+							<ul class="rag__sourcesList" id="ragSourcesList"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<p class="rag__note">
+				<strong>Note:</strong> This assistant runs on a lightweight local model, so it works best with short, direct questions and may return brief answers.
+			</p>
+		</div>
+	</div>
+</section>
