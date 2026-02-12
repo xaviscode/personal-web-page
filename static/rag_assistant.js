@@ -66,7 +66,7 @@
     setAnswer("…", "animate__fadeIn");
 
     try {
-      const res = await fetch(apiUrl("/query"), {
+      const res = await fetch("/rag/query", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
