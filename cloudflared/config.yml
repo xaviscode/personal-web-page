@@ -1,5 +1,5 @@
-tunnel: personal-web
-credentials-file: /etc/cloudflared/personal-web.json
+tunnel: b337899b-1fc8-4de3-84b9-ca2e446f822f
+credentials-file: /etc/cloudflared/b337899b-1fc8-4de3-84b9-ca2e446f822f.json
 
 ingress:
   - hostname: xavirubio.com
