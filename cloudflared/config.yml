@@ -3,5 +3,8 @@ credentials-file: /etc/cloudflared/personal-web.json
 
 ingress:
   - hostname: xavirubio.com
+    path: /rag/*
+    service: http://ragpi:8000
+  - hostname: xavirubio.com
     service: http://web:8080
   - service: http_status:404
