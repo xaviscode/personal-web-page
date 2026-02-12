@@ -5,6 +5,7 @@ services:
     restart: unless-stopped
     ports:
       - "127.0.0.1:8080:8080"
+    networks: [edge]
 
   cloudflared:
     image: cloudflare/cloudflared:latest
@@ -14,3 +15,8 @@ services:
     command: tunnel --config /etc/cloudflared/config.yml run
     volumes:
       - ./cloudflared:/etc/cloudflared:ro
+    networks: [edge]
+
+networks:
+  edge:
+    external: true
